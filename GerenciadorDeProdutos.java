@@ -1,13 +1,13 @@
-// Importações
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// Declaração da classe principal
+
 public class GerenciadorDeProdutos {
 
-    // Método principal (main)
+
     public static void main(String[] args) {
-    // Cria um ArrayList para armazenar os objetos Produto
+    
     ArrayList<Produto> listaDeProdutos = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
     int opcao = -1;
@@ -20,7 +20,7 @@ public class GerenciadorDeProdutos {
         System.out.println("0. Sair");
         System.out.print("Escolha uma opção: ");
         opcao = scanner.nextInt();
-        scanner.nextLine(); // Consome a quebra de linha
+        scanner.nextLine(); 
 
         switch (opcao) {
             case 1:
@@ -39,7 +39,7 @@ public class GerenciadorDeProdutos {
                 System.out.println("Opção inválida. Tente novamente.");
         }
     }
-    scanner.close(); // Fechar o scanner é uma boa prática
+    scanner.close(); 
 }
 
     // Método para adicionar um produto
@@ -50,7 +50,7 @@ public class GerenciadorDeProdutos {
         double preco = scanner.nextDouble();
         System.out.print("Digite o código do produto: ");
         int codigo = scanner.nextInt();
-        scanner.nextLine(); // Consome a quebra de linha
+        scanner.nextLine(); 
 
         Produto novoProduto = new Produto(nome, preco, codigo);
         lista.add(novoProduto);
@@ -73,7 +73,7 @@ public class GerenciadorDeProdutos {
     private static void buscarProduto(ArrayList<Produto> lista, Scanner scanner) {
         System.out.print("Digite o código do produto que deseja buscar: ");
         int codigoBusca = scanner.nextInt();
-        scanner.nextLine(); // Consome a quebra de linha
+        scanner.nextLine(); 
 
         for (Produto produto : lista) {
             if (produto.getCodigo() == codigoBusca) {
@@ -83,4 +83,5 @@ public class GerenciadorDeProdutos {
         }
         System.out.println("Produto com código " + codigoBusca + " não encontrado.");
     }
+
 }
