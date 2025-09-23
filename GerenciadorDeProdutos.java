@@ -42,7 +42,7 @@ public class GerenciadorDeProdutos {
     scanner.close(); 
 }
 
-    // Método para adicionar um produto
+    
     private static void adicionarProduto(ArrayList<Produto> lista, Scanner scanner) {
         System.out.print("Digite o nome do produto: ");
         String nome = scanner.nextLine();
@@ -57,7 +57,7 @@ public class GerenciadorDeProdutos {
         System.out.println("Produto adicionado com sucesso!");
     }
 
-    // Método para listar todos os produtos
+    
     private static void listarProdutos(ArrayList<Produto> lista) {
         if (lista.isEmpty()) {
             System.out.println("Nenhum produto cadastrado.");
@@ -69,7 +69,7 @@ public class GerenciadorDeProdutos {
         }
     }
 
-    // Método para buscar um produto por código
+   
     private static void buscarProduto(ArrayList<Produto> lista, Scanner scanner) {
         System.out.print("Digite o código do produto que deseja buscar: ");
         int codigoBusca = scanner.nextInt();
@@ -85,3 +85,4 @@ public class GerenciadorDeProdutos {
     }
 
 }
+
